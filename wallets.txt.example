@@ -1,0 +1,5 @@
+# One TON wallet address per line.
+# Use generated test wallets only for testnet validation.
+# For real minting, replace this file with the real recipient list from the user or production source.
+EQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM9c
+EQBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBy

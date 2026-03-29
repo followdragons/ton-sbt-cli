@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ton-sbt-cli"
+version = "0.1.0"
+description = "CLI for deploying and batch-minting TON SBT collections"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "FOLLOWDRAGONS" }
+]
+dependencies = [
+  "tonutils==2.0.5",
+  "python-dotenv==1.2.2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest==8.4.2",
+]
+
+[project.scripts]
+ton-sbt-cli = "ton_sbt_tool.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+  "integration: live-network integration checks",
+  "manual: opt-in tests that require operator-provided credentials or network access",
+]
